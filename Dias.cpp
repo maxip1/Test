@@ -27,7 +27,7 @@ bool Ano (unsigned A)  {return
 A%4 == 0 and (A%100 != 0 or A%400 == 0);    ? si es verdadera va a retornar directamente 1, asi que quizas convengan cambiar la fila 45 por "Ano (A) == 1 ? 29 :"
 o creo habria que modificarla de alguna otra forma, ya que por ej el 1900 no fue bisiesto, pero es divisble por 4, ahi la formula que está entiendo que lo consideraria bisiesto.
 Podriamos meter unos assert para verificar esta formula tambien.
-
+La llamaria esBisiesto para que saber que es lo que se busca
 */
 int Ano (int A)  {return 
     A%4 == 0 ? 0 :
