@@ -21,6 +21,13 @@ assert(Mes(1,1932) == 31);
 
 /*
 se verifica si el año es bisiesto
+
+¿No deberia ser:
+bool Ano (unsigned A)  {return
+A%4 == 0 and (A%100 != 0 or A%400 == 0);    ? si es verdadera va a retornar directamente 1, asi que quizas convengan cambiar la fila 45 por "Ano (A) == 1 ? 29 :"
+o creo habria que modificarla de alguna otra forma, ya que por ej el 1900 no fue bisiesto, pero es divisble por 4, ahi la formula que está entiendo que lo consideraria bisiesto.
+Podriamos meter unos assert para verificar esta formula tambien.
+
 */
 int Ano (int A)  {return 
     A%4 == 0 ? 0 :
@@ -29,6 +36,9 @@ int Ano (int A)  {return
     };
 /*
 Se verifica cuantos dias tiene el mes
+
+¿Los tipos de datos no deberian ser unsigned?
+Nombrar la funcion como getDiasDelMes
 */
 double Mes (double M, int A){ return
     M == 1 or M==3 or M==5 or M==7 or M==8 or M==10 or M==12 ? 31:
